@@ -6,33 +6,33 @@ function new_form() {
         <Def>
             <main>
                 <h1>Add a New Place</h1>
-                <form action="/places" method='POST'>
-                    <div>
+                <form style={{margin: '7px'}} action="/places" method='POST'>
+                    <div className='form-group'>
                         <label htmlFor="name">Place Name</label>
-                        <input id='name' name='name' required/>
+                        <input className='form-control' id='name' name='name' required/>
                     </div>
-                    <div>
+                    <div className='form-group'>
                         <label htmlFor="pic">Place Picture</label>
-                        <input type="url" id='pic'
+                        <input className='form-control' type="url" id='pic'
                         name='pic'/>
                     </div>
-                    <div>
+                    <div className='form-group'>
                         <label htmlFor="city">City</label>
-                        <input type="text" id='city'
+                        <input className='form-control' type="text" id='city'
                         name='city'/>
                     </div>
-                    <div>
+                    <div className='form-group'>
                         <label htmlFor="state">State</label>
-                        <input type="text" id='state'
+                        <input className='form-control' type="text" id='state'
                         name='state'/>
                     </div>
-                    <div>
+                    <div className='form-group'>
                         <label htmlFor="cuisines">Cuisines</label>
-                        <input type="text" id='cuisines'
+                        <input className='form-control' type="text" id='cuisines'
                         name='cuisines'required/>
                     </div>
                     <div>
-                        <input type="submit" value="Add Place"/>
+                        <input className='btn btn-primary' type="submit" value="Add Place"/>
                     </div>
                 </form>
             </main>
