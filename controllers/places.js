@@ -1,31 +1,25 @@
 const router = require('express').Router()
+const places = require('../models/places')
+
+router.post('/', (req, res) => {
+  if(!req.body.pic) {
+    req.body.pic = 'https://images.unsplash.com/photo-1628260412297-a3377e45006f?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  }
+  if(!req.body.city) {
+    req.body.city = 'Anytown'
+  }
+  if(!req.body.state) {
+    req.body.state = 'USA'
+  }
+  places.push(req.body)
+  res.redirect('/places')
+})
 
 router.get('/new', (req, res) => {
   res.render('places/new')
 })
 
-router.post('/', (req, res) => {
-  res.send('POST /places stub')
-})
-
-router.get('/', (req, res) => {
-    let places = [{
-        name: 'H-Thai-ML',
-        city: 'Seattle',
-        state: 'WA',
-        cuisines: 'Thai, Pan-Asian',
-        pic: '/images/restaurant1.jpg',
-        credit: `Photo by <a href="https://unsplash.com/@ninjason?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jason Leung</a> on <a href="https://unsplash.com/photos/photo-of-pub-set-in-room-during-daytime-poI7DelFiVA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-        `
-      }, {
-        name: 'Coding Cat Cafe',
-        city: 'Phoenix',
-        state: 'AZ',
-        cuisines: 'Coffee, Bakery',
-        pic: '/images/restaurant2.jpg',
-        credit: `Photo by <a href="https://unsplash.com/@shawnanggg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">shawnanggg</a> on <a href="https://unsplash.com/photos/brown-and-gray-concrete-store-nmpW_WwwVSc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-        `
-      }]      
+router.get('/', (req, res) => {     
     res.render('places/index', {places})
 })
 
