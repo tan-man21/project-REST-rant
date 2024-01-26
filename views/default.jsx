@@ -9,14 +9,31 @@ function Def (html) {
                 <link rel="stylesheet" href="/css/style.css" />
             </head>
             <body>
-                <nav>
+                {/* <nav>
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="/places">Places</a></li>
                         <li><a href="/places/new">Add Place</a></li>
                     </ul>
                 </nav>
+                <!-- Image and text --> */}
+                <nav style={{backgroundColor: 'cornflowerblue', color: 'white'}} className="navbar navbar-expand-lg">
+                <a className="navbar-brand" href="/">
+                <i style={{padding: '10px'}} className="fa-solid fa-utensils d-inline-block"></i>
+                    Rest-Rant
+                </a>
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/places">Places<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/places/new">Add Places</a>
+                </li>
+                </ul>
+                </nav>
                 {html.children}
+
+                <script src="https://kit.fontawesome.com/d6c9559ed6.js" crossorigin="anonymous"></script>
             </body>
         </html>
     )

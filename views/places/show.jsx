@@ -23,15 +23,19 @@ function show(data) {
                     <p className='card-text'>Located in {data.place.city}, {data.place.state} and serving {data.place.cuisines}</p>
                 </div>
                 </div>
+                <a href={`/places/${data.id}/edit`} className='btn btn-warning' style={{marginBottom: '30px', marginTop: '10px'}}>Edit</a>
+                <form action={`/places/${data.id}?_method=DELETE`} method='POST'>
+                    <button type='submit' className='btn btn-danger' href>Delete</button>
+                </form>
             </div>
             </div>
-            <div class="card">
-            <div class="card-header">
+            <div className="card">
+            <div className="card-header">
                 Read about us below!
             </div>
-            <div class="card-body">
-                <h3 class="card-title">Comments</h3>
-                <p class="card-text">No Comments Yet!</p>
+            <div className="card-body">
+                <h3 className="card-title">Comments</h3>
+                <p className="card-text">No Comments Yet!</p>
             </div>
             </div>
             </main>
