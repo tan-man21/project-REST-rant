@@ -7,7 +7,7 @@ function home() {
             <main>
                 <h1>REST-Rant</h1>
                 <div>
-                    <img className="rounded mx-auto d-block" style={{width: '50%'}} src="/images/fruits-veggies.jpg" alt="Fruits and Veggies" />
+                    <img className="rounded mx-auto d-block" style={{width: '45%'}} src="/images/fruits-veggies.jpg" alt="Fruits and Veggies" />
                     <div className='text-center'>
                     Photo by <a href="https://unsplash.com/@ellaolsson?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ella Olsson</a> on <a href="https://unsplash.com/photos/assorted-fruits-and-vegetable-on-brown-wooden-chopping-board-2IxTgsgFi-s?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
                     </div>
@@ -15,7 +15,7 @@ function home() {
                 <br />
                 <div className='text-center'>
                 <a href="/places">
-                    <button className='btn-primary'>Places Page</button>
+                    <button style={{marginBottom: '10px'}} className='btn btn-primary'>Places Page</button>
                 </a>
                 </div>
             </main>
