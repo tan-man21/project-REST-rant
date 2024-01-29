@@ -9,15 +9,7 @@ function Def (html) {
                 <link rel="stylesheet" href="/css/style.css" />
             </head>
             <body>
-                {/* <nav>
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/places">Places</a></li>
-                        <li><a href="/places/new">Add Place</a></li>
-                    </ul>
-                </nav>
-                <!-- Image and text --> */}
-                <nav style={{backgroundColor: 'cornflowerblue', color: 'white'}} className="navbar navbar-expand-lg">
+                <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
                 <a className="navbar-brand" href="/">
                 <i style={{padding: '10px'}} className="fa-solid fa-utensils d-inline-block"></i>
                     Rest-Rant

@@ -1,21 +1,28 @@
 body{
-    background-color: lightblue;
+    background-color: #343a40;
     text-align: center;
 }
 
 main{
     margin-right: 20px;
     margin-left: 20px;
-    background-color: white;
+    background-color: rgb(23, 23, 23);
 }
 
 h1{
     text-align: center;
-    color: cornflowerblue;
+    color: rgb(230, 230, 230);
+}
+
+p{
+    color: rgb(230, 230, 230);
+}
+
+label{
+    color: rgb(230, 230, 230);
 }
 
 nav{
-    background-color: cornflowerblue;
     padding: 10px;
 }
 
@@ -38,6 +45,6 @@ nav a{
 }
 
 nav a:hover{
-    color: pink;
+    color: rgb(238, 129, 129);
     text-decoration: none;
 }
