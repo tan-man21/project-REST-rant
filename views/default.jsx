@@ -9,7 +9,7 @@ function Def (html) {
                 <link rel="stylesheet" href="/css/style.css" />
             </head>
             <body>
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+                <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-white">
                 <a className="navbar-brand" href="/">
                 <i style={{padding: '10px'}} className="fa-solid fa-utensils d-inline-block"></i>
                     Rest-Rant
