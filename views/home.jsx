@@ -15,7 +15,7 @@ function home() {
                 <br />
                 <div className='text-center'>
                 <a href="/places">
-                    <button style={{marginBottom: '10px'}} className='btn btn-primary'>Places Page</button>
+                    <button style={{marginBottom: '10px', backgroundColor: '#057746', color: 'white'}} className='btn'>Places Page</button>
                 </a>
                 </div>
             </main>

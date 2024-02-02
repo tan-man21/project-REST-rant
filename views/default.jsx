@@ -9,12 +9,12 @@ function Def (html) {
                 <link rel="stylesheet" href="/css/style.css" />
             </head>
             <body>
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-white">
+                <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm p-1 mb-3">
                 <a className="navbar-brand" href="/">
                 <i style={{padding: '10px'}} className="fa-solid fa-utensils d-inline-block"></i>
                     Rest-Rant
                 </a>
-                <ul class="navbar-nav">
+                <ul class="nav justify-content-end">
                 <li class="nav-item">
                     <a class="nav-link" href="/places">Places<span class="sr-only"></span></a>
                 </li>

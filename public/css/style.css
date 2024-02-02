@@ -1,29 +1,31 @@
 body{
-    background-color: #343a40;
+    background-color: #9be942;
     text-align: center;
 }
 
 main{
     margin-right: 20px;
     margin-left: 20px;
-    background-color: rgb(23, 23, 23);
+    margin-bottom: 13px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
 }
 
 h1{
     text-align: center;
-    color: rgb(230, 230, 230);
+    color: rgb(0, 0, 0);
 }
 
 h3{
-    color: rgb(230, 230, 230);
+    color: rgb(0, 0, 0);
 }
 
 p{
-    color: rgb(230, 230, 230);
+    color: rgb(82, 82, 82);
 }
 
 label{
-    color: rgb(230, 230, 230);
+    color: rgb(0, 0, 0);
 }
 
 nav{
@@ -44,11 +46,19 @@ nav li{
 }
 
 nav a{
-    color: white;
-    font-size: 1.5em;
+    color: rgb(82, 82, 82);
+}
+nav a:hover{
+    color: #057746;
 }
 
-nav a:hover{
-    color: rgb(238, 129, 129);
-    text-decoration: none;
+.place-name{
+    color: #9be942;
+}
+
+main a{
+    color: black;
+}
+main a:hover{
+    color: #057746;
 }

@@ -38,7 +38,7 @@ function new_form() {
                         <input className="form-control" id='founded' name='founded'/>
                     </div>
                     <div style={{margin: 'auto'}}>
-                        <input className='btn btn-primary' type="submit" value="Add Place"/>
+                        <input style={{backgroundColor: '#057746', color: 'white'}} className='btn' type="submit" value="Add Place"/>
                     </div>
                     </div>
                 </form>

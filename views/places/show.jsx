@@ -14,9 +14,9 @@ function show(data) {
                 </div>
             </div>
             <div className="col-sm-6">
-                <div style={{border: 'none'}} className="card bg-dark m-3">
+                <div style={{border: 'none'}} className="card bg-light m-3">
                 <div className="card-body">
-                    <h1 className="card-title text-primary">{data.place.name}</h1>
+                    <h1 className="card-title place-name">{data.place.name}</h1>
                     <h3 className="card-title">Rating</h3>
                     <p className='card-text show'>Not Yet Rated</p>
                     <h3 className='card-title'>Description</h3>
@@ -29,7 +29,7 @@ function show(data) {
                 </div>
             </div>
             </div>
-            <div className="card bg-dark m-3">
+            <div className="card bg-light m-3">
             <div style={{color: 'white'}} className="card-header">
                 Read about us below!
             </div>
