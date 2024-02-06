@@ -2,6 +2,23 @@ const React = require('react')
 const Def = require('../default')
 
 function show(data) {
+    let comments = (
+        <h3 className='inactive'>No Comments Yet!</h3>
+    )
+    if(data.place.comments.length){
+        comments = data.place.comments.map(c => {
+            return (
+                <div className='border'>
+                    <h3 className='rant'>{c.rant ? 'Rant! 😡' : 'Rave! 😍'}</h3>
+                    <p>{c.content}</p>
+                    <h5>
+                        <strong style={{color: '#057746'}}>- {c.author}</strong>
+                    </h5>
+                    <h6>Rating: {c.stars}</h6>
+                </div>
+            )
+        })
+    }
     return (
         <Def>
             <main>
@@ -37,8 +54,34 @@ function show(data) {
             </div>
             <div className="card-body">
                 <h3 className="card-title">Comments</h3>
-                <p className="card-text show">No Comments Yet!</p>
+                <p className="card-text show">{comments}</p>
             </div>
+            </div>
+            <div>
+            <h1>Drop a Comment!</h1>
+                <form action={`/places/${data.place.id}/comment`} method='POST'>
+                <div className='row'>
+                    <div className='form-group col-sm-6'>
+                        <label htmlFor="author">Author</label>
+                        <input className='form-control' id='author' name='author'/>
+                    </div>
+                    <div className='form-group col-sm-6'>
+                        <label htmlFor="content">Content</label>
+                        <input className='form-control' type='textarea' id='content' name='content' required/>
+                    </div>
+                    <div className='form-group col-sm-6'>
+                        <label htmlFor="stars">Star Rating</label>
+                        <input className='form-control' type='number' id='stars' name='stars' min={0.5} max={5.0} step={0.5} required/>
+                    </div>
+                    <div className='form-group col-sm-6'>
+                        <label htmlFor="rant">Rant?</label>
+                        <input className='form-control' type='checkbox' id='rant' name='rant'/>
+                    </div>
+                    <div style={{margin: 'auto'}}>
+                        <input style={{backgroundColor: '#057746', color: 'white', marginBottom: '10px'}} className='btn' type="submit" value="Add Comment"/>
+                    </div>
+                </div>
+                </form>
             </div>
             </main>
         </Def>
