@@ -5,7 +5,25 @@ function show(data) {
     let comments = (
         <h3 className='inactive'>No Comments Yet!</h3>
     )
+    let rating = (
+        <h3 className='inactive'>
+            Not Yet Rated
+        </h3>
+    )
     if(data.place.comments.length){
+        let sumRatings = data.place.comments.reduce((tot, c) => {
+            return tot + c.stars
+        }, 0)
+        let averageRating = Math.round(sumRatings / data.place.comments.length)
+        let stars = ''
+        for (let i = 0; i < averageRating; i++){
+            stars += '⭐️'
+        }
+        rating = (
+            <h3>
+                {stars} Stars
+            </h3>
+        )
         comments = data.place.comments.map(c => {
             return (
                 <div className='border'>
@@ -36,7 +54,7 @@ function show(data) {
                 <div className="card-body">
                     <h1 className="card-title place-name">{data.place.name}</h1>
                     <h3 className="card-title">Rating</h3>
-                    <p className='card-text show'>Not Yet Rated</p>
+                    <p className='card-text show'>{rating}</p>
                     <h3 className='card-title'>Description</h3>
                     <p className='card-text show'>Serving {data.place.cuisines}</p>
                     <p className='card-text show'>{data.place.showEstablished()}</p>
