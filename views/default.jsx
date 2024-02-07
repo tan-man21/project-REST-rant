@@ -14,12 +14,12 @@ function Def (html) {
                 <i style={{padding: '10px'}} className="fa-solid fa-utensils d-inline-block"></i>
                     Rest-Rant
                 </a>
-                <ul class="nav justify-content-end">
-                <li class="nav-item">
-                    <a class="nav-link" href="/places">Places<span class="sr-only"></span></a>
+                <ul className="nav justify-content-end">
+                <li className="nav-item">
+                    <a className="nav-link" href="/places">Places<span className="sr-only"></span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/places/new">Add Places</a>
+                <li className="nav-item">
+                    <a className="nav-link" href="/places/new">Add Places</a>
                 </li>
                 </ul>
                 </nav>

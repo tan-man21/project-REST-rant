@@ -6,7 +6,7 @@ function edit_form(data) {
         <Def>
             <main>
                 <h1>Edit Place</h1>
-                <form style={{margin: '7px'}} action={`/places/${data.id}?_method=PUT`} method='POST'>
+                <form style={{margin: '7px', paddingBottom: '8px'}} action={`/places/${data.place._id}?_method=PUT`} method='POST'>
                     <div className='row'>
                     <div className='form-group col-sm-6'>
                         <label htmlFor="name">Place Name</label>
@@ -32,9 +32,13 @@ function edit_form(data) {
                         <input className='form-control' type="text" id='cuisines'
                         name='cuisines'required defaultValue={data.place.cuisines}/>
                     </div>
-                    <div style={{margin: 'auto'}}>
-                        <input className='btn btn-primary' type="submit" value="Done"/>
+                    <div className='form-group col-sm-6'>
+                        <label htmlFor="founded">Founded Year</label>
+                        <input type='number' className="form-control" id='founded' name='founded' value={data.place.founded}/>
                     </div>
+                    </div>
+                    <div style={{margin: 'auto'}} className='form-group col-sm-6'>
+                        <input style={{backgroundColor: '#057746', color: 'white'}} className='btn' type="submit" value="Update Place"/>
                     </div>
                 </form>
             </main>

@@ -26,13 +26,16 @@ function show(data) {
         )
         comments = data.place.comments.map(c => {
             return (
-                <div className='border'>
+                <div className='border' style={{paddingBottom: '8px'}}>
                     <h3 className='rant'>{c.rant ? 'Rant! 😡' : 'Rave! 😍'}</h3>
                     <p>{c.content}</p>
                     <h5>
                         <strong style={{color: '#057746'}}>- {c.author}</strong>
                     </h5>
                     <h6>Rating: {c.stars}</h6>
+                    <form action={`/places/${data.place._id}/comment/${c._id}?_method=DELETE`} method='POST'>
+                        <input type="submit" className='btn' value='Delete Comment' style={{color: '#dc3545', borderColor: '#dc3545'}}/>
+                    </form>
                 </div>
             )
         })
@@ -58,8 +61,8 @@ function show(data) {
                     <h3 className='card-title'>Description</h3>
                     <p className='card-text show'>Serving {data.place.cuisines}</p>
                     <p className='card-text show'>{data.place.showEstablished()}</p>
-                <a href={`/places/${data.id}/edit`} className='btn btn-warning' style={{marginBottom: '30px', marginTop: '10px'}}>Edit</a>
-                <form action={`/places/${data.id}?_method=DELETE`} method='POST'>
+                <a href={`/places/${data.place._id}/edit`} className='btn btn-warning' style={{marginBottom: '30px', marginTop: '10px'}}>Edit</a>
+                <form action={`/places/${data.place._id}?_method=DELETE`} method='POST'>
                     <button type='submit' className='btn btn-danger' href>Delete</button>
                 </form>
                 </div>
